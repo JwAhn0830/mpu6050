@@ -92,7 +92,32 @@ struct MPU6050_config
 ``
 struct MPU6050_config
 ``의 포인터입니다.
+
+리턴 값  
+``
+MPU6050_OK : 0
+``  문제 없음   
+``
+WHO_AM_I_REG : 1
+`` WHO_AM_I 레지스터와 I2C 통신 실패
+``
+PWR_MGMT_1_REG : 2
+`` PWR_MGMT_1 레지스터와 I2C 통신 실패  
+``
+SMPRT_DIV_REG : 3
+``  SMPRT_DIV 레지스터와 I2C 통신 실패  
+``
+GYRO_CONFIG_REG : 4
+``  GYRO_CONFIG 레지스터와 I2C 통신 실패 또는 ``
+MPU6050_config
+``구조체에서 gyroScaleRange 변수에 잘못된 값 할당  
+`` 
+ACCEL_CONFIG_REG : 5
+``  ACCEL_CONFIG 레지스터와 I2C 통신 실패 또는  ``
+MPU6050_config
+``구조체에서 accelScaleRange 변수에 잘못된 값 할당  
 <br /><br /><br />
+
 ```
 void readAccel_MPU6050(I2C_HandleTypeDef *I2Cx, MPU6050* data) 
 ```
