@@ -5,7 +5,8 @@
 
 ## 개발 환경
 MCU : STM32F103RB  
-IDE : STM32CubeIDE
+IDE : STM32CubeIDE  
+hal 드라이버 사용
 
 ## 구조체 및 함수 설명
 ### 1. 구조체
