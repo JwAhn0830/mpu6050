@@ -34,9 +34,9 @@ mpu6050의 자이로 및 가속도 데이터가 저장되는 구조체입니다.
 
 
 #### public 멤버
-``int16_t Accel_X_RAW,  int16_t Accel_Y_RAW,  int16_t Accel_Z_RAW``  :  각각 X축, Y축, Z축의 가속도의 raw data입니다
+``int16_t Accel_X_RAW``, ``int16_t Accel_Y_RAW``, ``int16_t Accel_Z_RAW`` :  각각 X축, Y축, Z축의 가속도의 raw data입니다
 
-``double Ax,  double Ay,  double Az``  :  각각 X축, Y축, Z축의 가속도를 ``accelDivider``변수의 값으로 나눈 값입니다.
+``double Ax``, ``double Ay``, ``double Az`` :  각각 X축, Y축, Z축의 가속도를 ``accelDivider``변수의 값으로 나눈 값입니다.
 ``accelDivider``의 값은 ``uint8_t gyoScaleRange`` 의 설정에 따라 달라집니다.
 
 앞서 설명한 두 구조체는 해당 라이브러리를 사용하는데 있어 **반드시** 선언해야합니다.
@@ -79,7 +79,7 @@ uint8_t init_MPU6050(I2C_HandleTypeDef *I2Cx, MPU6050_config *config)
 
 ``GYRO_CONFIG_REG : 4``  GYRO_CONFIG 레지스터와 I2C 통신 실패 또는 ``MPU6050_config``구조체에서 gyroScaleRange 변수에 잘못된 값 할당
 
-`` ACCEL_CONFIG_REG : 5``  ACCEL_CONFIG 레지스터와 I2C 통신 실패 또는  ``MPU6050_config``구조체에서 accelScaleRange 변수에 잘못된 값 할당
+``ACCEL_CONFIG_REG : 5``  ACCEL_CONFIG 레지스터와 I2C 통신 실패 또는  ``MPU6050_config``구조체에서 accelScaleRange 변수에 잘못된 값 할당
 <br /><br /><br />
 
 ```
